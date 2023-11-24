@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css1.css">
+    <style>
+        * {
+            margin: 15px;
+            box-sizing: border-box;
+        }
+
+        input {
+            font-size: xx-large
+        }
+
+        body {
+            font-size: xx-large;
+        }
+
+        button {
+            font-size: xx-large;
+
+            width: auto;
+            padding: 3px;
+        }
+
+        .box {
+            display: block;
+            justify-content: space-between;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .fun {
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            background: linear-gradient(135deg, cyan, red);
+        }
+    </style>
+    <script>
+        function add() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a + b;
+            document.getElementById("answer").value = c;
+        }
+
+        function multiply() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a * b;
+            document.getElementById("answer").value = c;
+        }
+        function sub() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a - b;
+            document.getElementById("answer").value = c;
+        }
+        function divide() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a / b;
+            document.getElementById("answer").value = c;
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="w3-card-4">
+        <h1>Basic Calculator</h1>
+        <div class="box">
+            <label for=""> Enter first number:</label><input id="first">
+        </div>
+        <div class="box">
+            <label for="">Enter Second number:</label><input id="second">
+        </div>
+        <div class="fun">
+            <button onclick="add()">Add</button>
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="sub()">Substract</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+        <div class="box">
+            <label for="">Answer:</label><input id="answer">
+        </div>
+    </div>
+</body>
+
+</html>
